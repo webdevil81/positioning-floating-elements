@@ -48,18 +48,6 @@ table {
 }
 
 /********************************************
-***         ***
-********************************************/
-
-.container {
-    
-}
-
-.container > * {
-    border: 1px solid #000;
-}
-
-/********************************************
 ***	Header Section	***
 ********************************************/
 
@@ -92,6 +80,7 @@ table {
 
 .logo {
 	width: 300px;
+	margin: 5px 0;
 }
 
 .header-right {
@@ -109,8 +98,6 @@ button {
 	background: rgb(88, 124, 148);
 	border: 1px solid #000;
 }
-
-
 
 /********************************************
 ***	Article Section	***
@@ -158,9 +145,19 @@ button {
 	font-weight: 900;
 }
 
+figure {
+	display: grid;
+}
+
 .wide-image {
 	grid-column: 2 / 5;
+	justify-self: center;
 	width: 100%;
+}
+
+.semi-wide {
+	width: 90%;
+	justify-self: center;
 }
 
 .credit {
@@ -168,7 +165,13 @@ button {
 }
 
 .theory-of-inflation {
+	grid-column: 2 / 5;
 	position: relative;
+	width: 100%;
+}
+
+.theory-image {
+	width: 100%;
 }
 
 .inflation-text {
@@ -192,3 +195,48 @@ button {
 	font-size: 14px;
 }
 
+.comments {
+	display: grid;
+	grid-auto-flow: column;
+	padding-bottom: 30px;
+}
+
+.comment-social {
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: end;
+}
+
+/********************************************
+***	Footer Section	***
+********************************************/
+
+.footer-nav {
+	grid-column: 2 / -2;
+	display: grid;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding-bottom: 20px;
+}
+
+.footer-title {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 5px;
+}
+
+.footer-nyt-logo {
+	width: 20%;
+	margin-bottom: 20px;
+}
+
+.footer-nav-menu {
+	display: grid;
+	grid-auto-flow: column;
+	line-height: 150%;
+}
+
+.footer-nav-menu h3 {
+	font-weight: 800;
+	margin-bottom: 5px;
+}
